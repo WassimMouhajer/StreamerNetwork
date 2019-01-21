@@ -17,13 +17,14 @@ class LiveVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var liveTab: UITabBarItem!
     
     var cx = [CxNetwork]()
+    var index = IndexPath()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.addSubview(self.refreshControl)
         tableView.rowHeight = 250
         self.downloadStreamerDetail {
-        
+            
         }
     }
     
@@ -69,7 +70,6 @@ class LiveVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             } else {
                 self.isOfflineLbl.isHidden = true
             }
-            
             completed()
         }
     }
@@ -80,18 +80,27 @@ class LiveVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cx.count
     }
     
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "LiveCell") as? LiveCell {
             let cxNetworks = cx[indexPath.row]
             cell.configureVideo(cx: cxNetworks)
+            index = indexPath
             return cell
         } else {
             return LiveCell()
         }
-        
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LiveToChat" {
+            if let vc = segue.destination as? ChatVC {
+                vc.chatId = self.cx[index.row].chatId
+                vc.videoId = self.cx[index.row].videoId
+            }
+        }
+    }
+    
+    
 }
 

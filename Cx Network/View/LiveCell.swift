@@ -17,7 +17,6 @@ class LiveCell: UITableViewCell {
     @IBOutlet weak var streamerLive: UILabel!
     
     func configureVideo(cx: CxNetwork) {
-//        liveView.dropShadow(scale: true)
         liveView.layer.masksToBounds = true
         liveView.layer.cornerRadius = 15
         amountViewers.layer.cornerRadius = 5

@@ -22,9 +22,15 @@ class CxNetwork {
     private var _liveData: Bool!
     private var _viewers: Int!
     private var _videoId: String!
-    
+    private var _chatID: String!
     private var _imageURL: String!
-
+    
+    var chatId: String {
+        if _chatID == nil {
+            _chatID = ""
+        }
+        return _chatID
+    }
     
     var videoId: String {
         if _videoId == nil {
@@ -141,18 +147,20 @@ class CxNetwork {
         
         if let isLive = streamerDict["liveData"] as? Dictionary<String, AnyObject> {
             if let live = isLive["live"] as? Bool {
-                    self._liveData = live
+                self._liveData = live
             }
             
-//            if _liveData == true {
-                if let viewer = isLive["viewers"] as? Int {
-                    self._viewers = viewer
-                }
-                
-                if let videoIden = isLive["videoId"] as? String {
-                    self._videoId = videoIden
-                }
-//            }
+            if let viewer = isLive["viewers"] as? Int {
+                self._viewers = viewer
+            }
+            
+            if let chatIden = isLive["chatId"] as? String {
+                self._chatID = chatIden
+            }
+            
+            if let videoIden = isLive["videoId"] as? String {
+                self._videoId = videoIden
+            }
             
         }
         

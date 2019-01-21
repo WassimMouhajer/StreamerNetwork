@@ -20,6 +20,9 @@
 		932EC10321424BBA009C94F6 /* OfflineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932EC10221424BBA009C94F6 /* OfflineCell.swift */; };
 		932EC10521434CD4009C94F6 /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932EC10421434CD4009C94F6 /* LiveCell.swift */; };
 		93C87DA52147A14200A2AC4C /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C87DA42147A14200A2AC4C /* Connection.swift */; };
+		93E3614521F63F57008F6BD1 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3614421F63F57008F6BD1 /* ChatVC.swift */; };
+		93E3614721F63F71008F6BD1 /* CxChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3614621F63F71008F6BD1 /* CxChat.swift */; };
+		93E3614921F63F93008F6BD1 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3614821F63F93008F6BD1 /* ChatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		932EC10221424BBA009C94F6 /* OfflineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineCell.swift; sourceTree = "<group>"; };
 		932EC10421434CD4009C94F6 /* LiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
 		93C87DA42147A14200A2AC4C /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		93E3614421F63F57008F6BD1 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		93E3614621F63F71008F6BD1 /* CxChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CxChat.swift; sourceTree = "<group>"; };
+		93E3614821F63F93008F6BD1 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		A35FAEF7DB5B20632BCA2221 /* Pods-Cx Network.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cx Network.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cx Network/Pods-Cx Network.debug.xcconfig"; sourceTree = "<group>"; };
 		EF3024D796250F2C5E59DF0D /* Pods_Cx_Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cx_Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +105,7 @@
 				932EC0E121407D92009C94F6 /* FeaturedVC.swift */,
 				932EC0E321407D92009C94F6 /* LiveVC.swift */,
 				932EC0FA2140E50C009C94F6 /* OfflineVC.swift */,
+				93E3614421F63F57008F6BD1 /* ChatVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,6 +113,9 @@
 		932EC0F82140DD99009C94F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				932EC10421434CD4009C94F6 /* LiveCell.swift */,
+				93E3614821F63F93008F6BD1 /* ChatCell.swift */,
+				932EC10221424BBA009C94F6 /* OfflineCell.swift */,
 				932EC0EA21407DA3009C94F6 /* LaunchScreen.storyboard */,
 				932EC0E521407D92009C94F6 /* Main.storyboard */,
 			);
@@ -118,8 +128,7 @@
 				93C87DA42147A14200A2AC4C /* Connection.swift */,
 				932EC0F52140DD20009C94F6 /* Constants.swift */,
 				932EC0FE2140F6EE009C94F6 /* CxNetwork.swift */,
-				932EC10221424BBA009C94F6 /* OfflineCell.swift */,
-				932EC10421434CD4009C94F6 /* LiveCell.swift */,
+				93E3614621F63F71008F6BD1 /* CxChat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,10 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93E3614721F63F71008F6BD1 /* CxChat.swift in Sources */,
 				93C87DA52147A14200A2AC4C /* Connection.swift in Sources */,
 				932EC10521434CD4009C94F6 /* LiveCell.swift in Sources */,
 				932EC0F62140DD20009C94F6 /* Constants.swift in Sources */,
 				932EC0E421407D92009C94F6 /* LiveVC.swift in Sources */,
+				93E3614921F63F93008F6BD1 /* ChatCell.swift in Sources */,
+				93E3614521F63F57008F6BD1 /* ChatVC.swift in Sources */,
 				932EC0E021407D92009C94F6 /* AppDelegate.swift in Sources */,
 				932EC0E221407D92009C94F6 /* FeaturedVC.swift in Sources */,
 				932EC0FB2140E50C009C94F6 /* OfflineVC.swift in Sources */,

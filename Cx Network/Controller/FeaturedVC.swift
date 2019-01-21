@@ -211,6 +211,14 @@ class FeaturedVC: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FeaturedToChat" {
+            if let vc = segue.destination as? ChatVC {
+                vc.videoId = bestCx.videoId
+                vc.chatId = bestCx.chatId
+            }
+        }
+    }
     
 }
 

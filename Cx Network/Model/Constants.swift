@@ -8,7 +8,6 @@
 
 import Foundation
 
-
     let URL_BASE = "https://api-production.iceposeidon.com/"
     let URL_STREAMER = "streamers/full"
     typealias DownloadComplete = () -> ()
